@@ -9,27 +9,31 @@
 function giveMeRandom(n){
     let arr = []
     for(let i = 0; i < n; i++){
-        arr.push(Math.random()*10)
+        arr.push(Math.floor(Math.random()*11))
     }
     return arr
 }
 
-let val = giveMeRandom(5)
+let val = giveMeRandom(4)
 
-function checkArray(val){
-    let result = 0
-    for(let i = 0; i < val; i++){
+const checkArray = function(val){
+    let result = []
+    let sum = 0
+    for(let i = 0; i < val.length; i++){
         if(i > 5){
+            result.push(val[i])
             console.log(i, 'è maggiore di 5')
+            sum += val[i]
         }else{
+            result.push(val[i])
             console.log(i, 'non è maggiore di 5')
-            result += i
         }
     }
+    console.log(sum)
     return result
 }
 
-console.log(checkArray())
+console.log(checkArray(val))
 
 /* EXTRA 2
  Nel tuo eCommerce disponi di un'array di oggetti chiamato "shoppingCart". Ognuno di questi oggetti ha le seguenti proprietà: "price", "name", "id" e "quantity".

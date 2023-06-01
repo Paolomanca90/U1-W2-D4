@@ -157,7 +157,7 @@ console.log(cutString('stringa di prova'))
 function giveMeRandom(n){
     let arr = []
     for(let i = 0; i < n; i++){
-        arr.push(Math.random()*10)
+        arr.push(Math.floor(Math.random()*11))
     }
     return arr
 }
